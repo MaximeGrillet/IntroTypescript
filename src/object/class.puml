@@ -1,0 +1,54 @@
+@startuml Class
+' class User {
+'   + visitedWebsite()
+' }
+
+' class Admin {
+'   - username: string
+'   - password: string
+'   + login()
+'   + manageWebsite()
+' }
+
+' class Website {
+'   - url: string
+'   + displayProject()
+' }
+
+' User --|> Website
+' Admin --|> Website
+
+interface Pet{
+  walk()
+  eat()
+  sleep()
+}
+
+' "+" public
+'  "#" protected
+abstract Animal {
+  # String name
+  - String color
+  - String race
+  - Number age
+    constructor(name, color, race, age)
+  +  walk()
+  +  eat()
+  +  sleep()
+  +  getColor()
+  +  setColor(color)
+}
+
+class Dog{
+  + bark()
+}
+
+class Cat{
+   + meow()
+}
+
+Animal --|> Dog
+Animal --|> Cat
+Pet --|> Animal
+
+@enduml
