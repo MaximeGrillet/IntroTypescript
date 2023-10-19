@@ -1,0 +1,48 @@
+@startuml ClassMarvelous
+
+class Project {
+  - boolean isPublic
+  - boolean isArchived
+  - String name
+  - String full_name
+  - String description
+  - String language
+  - String html_url
+  - String license
+  - Owner owner
+  - Date created_at
+  - Date updated_at
+  constructor(name, full_name, description, language, html_url, license, owner, created_at, updated_at)
+  + isPublic()
+  + isArchived()
+  + getName()
+  + getFullName()
+  + getDescription()
+  + getLanguage()
+  + getHtmlUrl()
+  + getLicense()
+  + getOwner()
+  + getCreatedAt()
+  + getUpdatedAt()
+}
+
+class Owner {
+  - String login
+  - String html_url
+  - String type
+  - String avatar_url
+  - Date created_at
+  - Date updated_at
+  constructor(login, html_url, type, avatar_url, created_at, updated_at)
+  + getLogin()
+  + getHtmlUrl()
+  + getType()
+  + getAvatarUrl()
+  + getCreatedAt()
+  + getUpdatedAt()
+}
+
+
+Owner --|> Project
+
+@enduml
